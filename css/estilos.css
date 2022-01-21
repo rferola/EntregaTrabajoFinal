@@ -1,3 +1,4 @@
+/* Estilos para las secciones y lo general */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 /* Estilos para las partes principales */
 header {
 
-    background-image: linear-gradient(to right, white , rgb(250, 211, 250));
+    background-image: linear-gradient(to right, white, rgb(250, 211, 250));
     height: 25vh;
     display: flex;
 
@@ -23,7 +24,7 @@ main {
 
 footer {
     display: flex;
-    background-image: linear-gradient(to right, white , rgb(250, 211, 250));
+    background-image: linear-gradient(to right, white, rgb(250, 211, 250));
     height: 10vh;
     justify-content: center;
 }
@@ -73,15 +74,17 @@ footer {
     animation-duration: 3s;
     animation-name: aparecer;
 }
+
 @keyframes aparecer {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
- }
- 
+}
+
 .textoPrincipal {
     display: flex;
     text-align: center;
@@ -93,18 +96,21 @@ footer {
     animation-duration: 4s;
     animation-name: aparecer2;
 }
+
 @keyframes aparecer2 {
     0% {
-      opacity: 0;
-    }
-    50%{
         opacity: 0;
     }
-    100% {
-      opacity: 1;
+
+    50% {
+        opacity: 0;
     }
- }
- 
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .textoPrincipal2 {
     display: flex;
@@ -146,7 +152,8 @@ footer {
     transform: rotate(5deg);
     transition: height 1s, width 1s;
 }
-.mesa1:hover{
+
+.mesa1:hover {
     height: 45vh;
     width: 18vw;
 }
@@ -159,7 +166,8 @@ footer {
     border-color: thistle;
     transition: height 1s, width 1s;
 }
-.mesa2:hover{
+
+.mesa2:hover {
     height: 45vh;
     width: 35vw;
 }
@@ -174,10 +182,12 @@ footer {
     transform: rotate(-5deg);
     transition: height 1s, width 1s;
 }
-.mesa3:hover{
+
+.mesa3:hover {
     height: 45vh;
     width: 25vw;
 }
+
 .mapa {
     height: 50vh;
     width: 40vw;
@@ -188,16 +198,6 @@ footer {
     width: 40vw;
 }
 
-.tamaño {
-    height: 7vh;
-    width: 4vw;
-}
-
-.tamaño2 {
-    height: 6vh;
-    width: 3vw;
-}
-
 .achicar {
     height: 35vh;
     width: 18vw;
@@ -206,7 +206,8 @@ footer {
     border-color: thistle;
     transition: height 1s, width 1s;
 }
-.achicar:hover{
+
+.achicar:hover {
     height: 50vh;
     width: 25vw;
 }
@@ -337,10 +338,24 @@ h2 {
     height: 4vh;
     transition: heigth 1s, width 1s;
 }
-.ingresoDatos:focus{
+
+.ingresoDatos:focus {
     width: 15vw;
     height: 5vh;
 }
+
+/* En esta última parte, están las clases del footer */
+
+.tamaño {
+    height: 7vh;
+    width: 4vw;
+}
+
+.tamaño2 {
+    height: 6vh;
+    width: 3vw;
+}
+
 /* Acá arranco con las medias queries para un ancho de 1024 máximo */
 
 @media (max-width: 1024px) {
@@ -405,10 +420,12 @@ h2 {
         padding: 30px;
         margin-left: 10vw;
     }
+
     .formatoMenu {
         font-size: 23px;
         width: 50vw;
     }
+
     .acomodarBusqueda {
         display: flex;
         height: 5vh;
@@ -417,10 +434,26 @@ h2 {
         margin-top: 20vh;
     }
 
+    .botonCompras {
+        width: 20vw;
+        margin-left: 40vw;
+        margin-top: 6vh;
+        font-weight: bold;
+        font-size: 2.5vh;
+    }
+
 }
 
 /* Acá arranco con las medias queries para un ancho de 915 máximo */
 @media (max-width: 915px) {
+    header {
+        align-items: end;
+        width: 100vw;
+    }
+
+    main {
+        height: 160vh;
+    }
 
     .titulo {
         font-size: 35px;
@@ -436,10 +469,7 @@ h2 {
         width: 25vw;
     }
 
-    header {
-        align-items: end;
-        width: 100vw;
-    }
+
 
     .acomodarBusqueda {
         width: 10vw;
@@ -479,6 +509,26 @@ h2 {
     .botonCompras {
         font-size: 12px;
     }
+
+    .achicar {
+        height: 20vh;
+    }
+
+    .achicar3 {
+        height: 17vh;
+    }
+
+    .achicar2 {
+        width: 60vw;
+    }
+
+    .botonCompras {
+        width: 40vw;
+        margin-left: 30vw;
+        margin-top: 6vh;
+        font-weight: bold;
+        font-size: 4vh;
+    }
 }
 
 /* Acá arranco con las medias queries para un ancho de 751 máximo */
@@ -488,6 +538,14 @@ h2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    main {
+        height: 160vh;
+    }
+
+    footer {
+        height: 7vh;
     }
 
     .tamañoLogo {
@@ -554,13 +612,13 @@ h2 {
     }
 
     .tamaño {
-        height: 8vh;
-        width: 8vw;
+        height: 6vh;
+        width: 6vw;
     }
 
     .tamaño2 {
-        height: 7vh;
-        width: 8vw;
+        height: 5vh;
+        width: 6vw;
     }
 
     .achicar {
@@ -574,7 +632,7 @@ h2 {
 
     .achicar2 {
 
-        height: 40vh;
+        height: 30vh;
         width: 80vw;
 
     }
@@ -590,6 +648,7 @@ h2 {
         padding: 20px;
         margin-left: 5vw;
     }
+
     .hijoFormulario {
         display: flex;
         flex-direction: column;
@@ -599,18 +658,22 @@ h2 {
         justify-content: space-between;
         margin-bottom: 2vh;
     }
+
     .ingresoDatos {
         width: 40vw;
         height: 4vh;
     }
-    h2{
+
+    h2 {
         font-size: 23px;
     }
+
     .cuadroTexto {
         width: 55vw;
         height: 45vh;
         margin-bottom: 4vh;
     }
+
     .achicarCompras {
         height: 15vh;
         width: 20vw;
@@ -618,16 +681,22 @@ h2 {
         border: solid;
         border-color: thistle;
     }
+
     .hacerLinea {
         width: 15vw;
         font-size: 10px;
     }
+
     .botonCompras {
-        width: 30vw;
-        margin-left: 35vw;
+        width: 40vw;
+        margin-left: 30vw;
         margin-top: 6vh;
         font-weight: bold;
-        font-size: 3vh;
+        font-size: 2.5vh;
+    }
+
+    .achicar {
+        height: 10vh;
     }
 
 }
